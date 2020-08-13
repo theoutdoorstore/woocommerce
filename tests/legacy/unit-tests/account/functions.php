@@ -11,6 +11,15 @@
 class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 
 	/**
+	 * Setup:
+	 * 1. Create the WC pages.
+	 */
+	public function setUp() {
+		parent::setUp();
+		WC_Install::create_pages();
+	}
+
+	/**
 	 * Test wc_lostpassword_url().
 	 *
 	 * @since 3.3.0
